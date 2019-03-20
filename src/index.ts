@@ -1,17 +1,10 @@
 import './css/style.css';
 import printMe from './js/print.js';
+import './scss/main.scss';
 
-function component() {
-  var element = document.createElement('div');
-  var btn = document.createElement('button');
+console.log(printMe());
 
-  btn.innerHTML = 'Hi there';
-  btn.onclick = printMe;
-
-  element.classList.add('hello');
-  element.appendChild(btn);
-
-  return element;
-}
-
-document.body.appendChild(component());
+let test = (e: number): void => {
+  console.log('test', e);
+};
+test(3);

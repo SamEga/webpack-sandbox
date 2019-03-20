@@ -6,6 +6,16 @@ module.exports = {
   entry: './src/index.ts',
   module: {
     rules: [
+      // {
+      //   test: /\.m?js$/,
+      //   exclude: /(node_modules|bower_components)/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env']
+      //     }
+      //   }
+      // },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -78,7 +88,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      template: './src/index.html'
     })
   ],
   output: {
